@@ -2,6 +2,7 @@ FROM vitess/bootstrap:mysql56
 
 # Clear out old tree from bootstrap image.
 USER root
+RUN apt-get --yes --fix-missing update && apt-get install --yes git vim tcpdump strace python-ptrace 
 RUN rm -rf /vt/src/github.com/youtube/vitess
 
 # Re-copy sources from working tree
