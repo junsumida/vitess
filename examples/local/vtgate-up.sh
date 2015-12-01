@@ -17,7 +17,7 @@ source $script_root/env.sh
 $VTROOT/bin/vtgate \
   -log_dir $VTDATAROOT/tmp \
   -port $port \
-  -grpc_port $grpcport=15002 \
+  -grpc_port $grpcport \
   -cell $cell \
   -tablet_protocol grpc \
   -service_map 'grpc-vtgateservice' \
